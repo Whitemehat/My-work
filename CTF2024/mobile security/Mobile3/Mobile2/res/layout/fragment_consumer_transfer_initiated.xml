@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ImageView android:id="@id/illustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/view_size_16" android:scaleType="centerInside" android:importantForAccessibility="no" app:srcCompat="@drawable/illustration_transfer_initiated_checkmark" />
+    <LinearLayout android:orientation="vertical" android:id="@id/transferInitiatedInfoContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_24" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_16" android:text="@string/transfer_initiated" android:fontFamily="@font/coinbase_display" android:layout_marginStart="@dimen/view_size_32" android:layout_marginEnd="@dimen/view_size_32" />
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="#ff9f9fa3" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_8" android:text="@string/desc__consumer_transfer_initiated" android:layout_marginStart="@dimen/view_size_32" android:layout_marginEnd="@dimen/view_size_32" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:textColor="@color/white" android:id="@id/doneBtn" android:background="@drawable/button_primary" android:padding="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/view_size_32" android:text="@string/done" android:textAllCaps="false" android:layout_marginStart="@dimen/view_size_32" android:layout_marginEnd="@dimen/view_size_32" android:stateListAnimator="@null" />
+</LinearLayout>

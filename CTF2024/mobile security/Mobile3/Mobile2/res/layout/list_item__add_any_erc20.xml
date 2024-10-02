@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height_medium" android:paddingStart="@dimen/view_size_16" android:paddingEnd="@dimen/view_size_16"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/avatar" android:layout_width="@dimen/avatar_size_extra_small" android:layout_height="@dimen/avatar_size_extra_small" android:src="@drawable/ic_add_dark" app:civ_border_color="@color/grey_0" app:civ_border_width="@dimen/border_size_default" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/emptyMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_any_erc20_token" android:layout_marginStart="@dimen/view_size_16" app:layout_constraintBottom_toBottomOf="@id/avatar" app:layout_constraintStart_toEndOf="@id/avatar" app:layout_constraintTop_toTopOf="@id/avatar" style="@style/TextBold.Ellipsizes" />
+</androidx.constraintlayout.widget.ConstraintLayout>

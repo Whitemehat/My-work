@@ -1,0 +1,48 @@
+.class public final synthetic Lcom/coinbase/wallet/bip44wallets/interfaces/t0;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lh/c/m0/d;
+
+
+# static fields
+.field public static final synthetic a:Lcom/coinbase/wallet/bip44wallets/interfaces/t0;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/coinbase/wallet/bip44wallets/interfaces/t0;
+
+    invoke-direct {v0}, Lcom/coinbase/wallet/bip44wallets/interfaces/t0;-><init>()V
+
+    sput-object v0, Lcom/coinbase/wallet/bip44wallets/interfaces/t0;->a:Lcom/coinbase/wallet/bip44wallets/interfaces/t0;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Lcom/coinbase/wallet/bip44wallets/models/BIP44SignedTx;
+
+    check-cast p2, Lcom/coinbase/wallet/bip44wallets/models/BIP44SignedTx;
+
+    invoke-static {p1, p2}, Lcom/coinbase/wallet/bip44wallets/interfaces/BIP44BasedTxManaging;->z(Lcom/coinbase/wallet/bip44wallets/models/BIP44SignedTx;Lcom/coinbase/wallet/bip44wallets/models/BIP44SignedTx;)Z
+
+    move-result p1
+
+    return p1
+.end method

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/onboarding_nav_graph" app:startDestination="@id/landingFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/backup_phrase_nav_graph" />
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <fragment android:label="LandingFragment" android:name="com.toshi.view.fragment.onboarding.LandingFragment" android:id="@id/landingFragment">
+        <action android:id="@id/action_landingFragment_to_legalAgreementFragment" app:destination="@id/legalAgreementFragment" />
+        <action android:id="@id/action_landingFragment_to_restoreWalletFragment" app:destination="@id/restoreWalletFragment" />
+        <action android:id="@id/action_landingFragment_to_signInFragment" app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment android:label="SignInFragment" android:name="com.toshi.view.fragment.SignInFragment" android:id="@id/signInFragment">
+        <action android:id="@id/action_signInFragment_to_readMoreRecoveryPhraseFragment" app:destination="@id/readMoreRecoveryPhraseFragment" />
+        <action android:id="@id/action_SignInFragment_to_signInWalletAuthenticationOnboardingFragment" app:destination="@id/signInWalletAuthenticationOnboardingFragment" />
+        <action android:id="@id/action_signInFragment_to_legalAgreementFragment" app:destination="@id/legalAgreementFragment" />
+    </fragment>
+    <fragment android:label="LegalAgreementFragment" android:name="com.toshi.view.fragment.onboarding.LegalAgreementFragment" android:id="@id/legalAgreementFragment">
+        <action android:id="@id/action_legalAgreementFragment_to_pickUsernameFragment" app:destination="@id/pickUsernameFragment" />
+        <action android:id="@id/action_legalAgreementFragment_to_legalViewFragment" app:destination="@id/legalViewFragment" />
+        <action android:id="@id/action_legalAgreementFragment_to_signInPickUsernameFragment" app:destination="@id/signInPickUsernameFragment" />
+    </fragment>
+    <fragment android:label="PickUsernameFragment" android:name="com.toshi.view.fragment.pickUsername.PickUsernameFragment" android:id="@id/pickUsernameFragment">
+        <action android:id="@id/action_pickUsernameFragment_to_privacySelectionFragment" app:destination="@id/privacySelectionFragment" />
+    </fragment>
+    <fragment android:label="PrivacySelectionFragment" android:name="com.toshi.view.fragment.onboarding.PrivacySelectionFragment" android:id="@id/privacySelectionFragment">
+        <action android:id="@id/action_privacySelectionFragment_to_newWalletAuthenticationOnboardingFragment" app:destination="@id/newWalletAuthenticationOnboardingFragment" />
+    </fragment>
+    <fragment android:label="NewWalletAuthenticationOnboardingFragment" android:name="com.toshi.view.fragment.onboarding.authMethod.NewWalletAuthenticationOnboardingFragment" android:id="@id/newWalletAuthenticationOnboardingFragment">
+        <action android:id="@id/action_newWalletAuthenticationFragment_to_onboardingBackupRecoveryPhraseFragment" app:destination="@id/onboardingBackupRecoveryPhraseFragment" />
+    </fragment>
+    <fragment android:label="OnboardingRecoveryPhraseFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.OnboardingBackupRecoveryPhraseFragment" android:id="@id/onboardingBackupRecoveryPhraseFragment">
+        <action android:id="@id/action_onboardingBackupRecoveryPhraseFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+    </fragment>
+    <fragment android:label="SignInWalletAuthenticationOnboardingFragment" android:name="com.toshi.view.fragment.onboarding.authMethod.SignInWalletAuthenticationOnboardingFragment" android:id="@id/signInWalletAuthenticationOnboardingFragment" />
+    <fragment android:label="ReadMoreRecoveryPhraseFragment" android:name="com.toshi.view.fragment.ReadMoreRecoveryPhraseFragment" android:id="@id/readMoreRecoveryPhraseFragment" />
+    <fragment android:label="LegalViewFragment" android:name="com.toshi.view.fragment.legal.LegalViewFragment" android:id="@id/legalViewFragment" />
+    <fragment android:label="SignInPickUsernameFragment" android:name="com.toshi.view.fragment.pickUsername.SignInPickUsernameFragment" android:id="@id/signInPickUsernameFragment">
+        <action android:id="@id/action_signInPickUsernameFragment_to_privacySelectionFragment" app:destination="@id/privacySelectionFragment" />
+    </fragment>
+    <fragment android:label="RestoreWalletFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.RestoreWalletFragment" android:id="@id/restoreWalletFragment">
+        <action android:id="@id/action_restoreWalletFragment_to_signInFragment" app:destination="@id/signInFragment" />
+        <action android:id="@id/action_restoreWalletFragment_to_backupPickerFragment" app:destination="@id/backupPickerFragment" />
+        <action android:id="@id/action_restoreWalletFragment_to_enterPasswordFragment" app:destination="@id/enterPasswordFragment" />
+    </fragment>
+    <fragment android:label="BackupPickerFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.BackupPickerFragment" android:id="@id/backupPickerFragment">
+        <action android:id="@id/action_backupPickerFragment_to_enterPasswordFragment" app:destination="@id/enterPasswordFragment" />
+    </fragment>
+    <fragment android:label="EnterPasswordFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.EnterPasswordFragment" android:id="@id/enterPasswordFragment">
+        <action android:id="@id/action_enterPasswordFragment_to_signInWalletAuthenticationOnboardingFragment" app:destination="@id/signInWalletAuthenticationOnboardingFragment" />
+    </fragment>
+</navigation>

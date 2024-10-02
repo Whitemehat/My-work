@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:behavior_hideable="true" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_font_default" android:textColor="@color/primary_blue" android:gravity="center" android:id="@id/fromCoinbase" android:background="@color/white" android:padding="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/from_my_coinbase_account" />
+    <View android:background="@color/border_color" android:layout_width="fill_parent" android:layout_height="@dimen/border_size_default" />
+    <TextView android:textSize="@dimen/text_size_font_default" android:textColor="@color/grey_80" android:gravity="center" android:id="@id/fromOther" android:padding="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/from_elsewhere" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/view_size_16" app:cardCornerRadius="@dimen/view_size_16"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/dialogContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/view_size_56">
+            <TextView android:textColor="@color/primary_black" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/view_size_24" android:layout_marginEnd="@dimen/view_size_24" style="@style/DefaultBold16Medium" />
+            <ImageButton android:id="@id/closeButton" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/view_size_44" android:layout_height="@dimen/view_size_44" android:layout_margin="@dimen/view_size_6" android:scaleType="centerInside" android:tint="@color/grey_20" app:layout_constraintDimensionRatio="1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_close_black_24dp" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

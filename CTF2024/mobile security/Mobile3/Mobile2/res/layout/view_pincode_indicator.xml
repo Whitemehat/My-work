@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" />
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" android:layout_marginStart="@dimen/view_size_12" />
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" android:layout_marginStart="@dimen/view_size_12" />
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" android:layout_marginStart="@dimen/view_size_12" />
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" android:layout_marginStart="@dimen/view_size_12" />
+    <View android:background="@drawable/pin_border_circle" android:layout_width="@dimen/view_size_24" android:layout_height="@dimen/view_size_24" android:layout_marginStart="@dimen/view_size_12" />
+</merge>

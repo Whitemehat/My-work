@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/settings_nav_graph" app:startDestination="@id/settingsViewFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/backup_phrase_nav_graph" />
+    <include app:graph="@navigation/debug_nav_graph" />
+    <include app:graph="@navigation/consumer_nav_graph" />
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <fragment android:label="SettingsViewFragment" android:name="com.toshi.view.fragment.toplevel.SettingsFragment" android:id="@id/settingsViewFragment">
+        <action android:id="@id/action_settingsViewFragment_to_userProfileSettingsFragment" app:destination="@id/userProfileSettingsFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_advancedSettingsFragment" app:destination="@id/advancedSettingsFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_debugMenuFragment" app:destination="@id/debug_nav_graph" />
+        <action android:id="@id/action_settingsViewFragment_to_appLockSettingsFragment" app:destination="@id/appLockSettingsFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+        <action android:id="@id/action_settingsViewFragment_to_consumerAccountsFragment" app:destination="@id/consumer_nav_graph" />
+        <action android:id="@id/action_settingsViewFragment_to_currencyFragment" app:destination="@id/currencyFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_legalFragment" app:destination="@id/legalFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_walletLinkSettingsFragment" app:destination="@id/walletLinkSettingsFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_universalQRScannerFragment" app:destination="@id/universalQRScannerFragment" />
+        <action android:id="@id/action_settingsViewFragment_to_networkSwitcherFragment" app:destination="@id/networkSwitcherFragment" />
+    </fragment>
+    <fragment android:label="UserProfileFragment" android:name="com.coinbase.wallet.features.settings.views.UserProfileFragment" android:id="@id/userProfileSettingsFragment" />
+    <fragment android:label="AdvancedSettingsFragment" android:name="com.toshi.view.fragment.AdvancedSettingsFragment" android:id="@id/advancedSettingsFragment">
+        <action android:id="@id/action_advancedSettingsFragment_to_walletPickerFragment" app:destination="@id/walletPickerFragment" />
+    </fragment>
+    <fragment android:label="AppLockSettingsFragment" android:name="com.toshi.view.fragment.AppLockSettingsFragment" android:id="@id/appLockSettingsFragment">
+        <action android:id="@id/action_appLockSettingsFragment_to_authenticationFragment" app:destination="@id/authenticationFragment" />
+        <action android:id="@id/action_appLockSettingsFragment_to_switchPinLockFragment" app:destination="@id/switchPinLockFragment" />
+    </fragment>
+    <fragment android:label="AuthenticationFragment" android:name="com.toshi.view.fragment.AuthenticationFragment" android:id="@id/authenticationFragment">
+        <action android:id="@id/action_authenticationFragment_to_switchPinLockFragment" app:destination="@id/switchPinLockFragment" />
+    </fragment>
+    <fragment android:label="CurrencyFragment" android:name="com.toshi.view.fragment.CurrencyFragment" android:id="@id/currencyFragment" />
+    <fragment android:label="LegalFragment" android:name="com.toshi.view.fragment.legal.LegalFragment" android:id="@id/legalFragment">
+        <action android:id="@id/action_legalFragment_to_legalViewFragment" app:destination="@id/legalViewFragment" />
+        <action android:id="@id/action_legalFragment_to_licenseListFragment" app:destination="@id/licenseListFragment" />
+    </fragment>
+    <fragment android:label="LegalViewFragment" android:name="com.toshi.view.fragment.legal.LegalViewFragment" android:id="@id/legalViewFragment" />
+    <fragment android:label="LicenseFragment" android:name="com.toshi.view.fragment.legal.LicenseFragment" android:id="@id/licenseFragment" />
+    <fragment android:label="LicenseListFragment" android:name="com.toshi.view.fragment.legal.LicenseListFragment" android:id="@id/licenseListFragment">
+        <action android:id="@id/action_licenseListFragment_to_licenseFragment" app:destination="@id/licenseFragment" />
+    </fragment>
+    <fragment android:label="NetworkSwitcherFragment" android:name="com.toshi.view.fragment.NetworkSwitcherFragment" android:id="@id/networkSwitcherFragment" />
+    <fragment android:label="WalletsFragment" android:name="com.toshi.view.fragment.WalletPickerFragment" android:id="@id/walletPickerFragment" />
+    <fragment android:label="SwitchPinLockFragment" android:name="com.toshi.view.activity.pin.SwitchPinLockFragment" android:id="@id/switchPinLockFragment" />
+    <fragment android:label="WalletLinkSettingsFragment" android:name="com.coinbase.wallet.features.walletlink.views.WalletLinkSettingsFragment" android:id="@id/walletLinkSettingsFragment">
+        <action android:id="@id/action_walletLinkSettingsFragment_to_universalQRScannerFragment" app:destination="@id/universalQRScannerFragment" />
+    </fragment>
+    <fragment android:label="UniversalQRScannerFragment" android:name="com.toshi.qr.view.fragment.UniversalQRScannerFragment" android:id="@id/universalQRScannerFragment">
+        <action android:id="@id/action_universalQRScannerFragment_to_completeFragment" app:destination="@id/completeFragment" />
+    </fragment>
+    <fragment android:label="CompleteFragment" android:name="com.coinbase.wallet.features.send.views.CompleteFragment" android:id="@id/completeFragment" />
+</navigation>

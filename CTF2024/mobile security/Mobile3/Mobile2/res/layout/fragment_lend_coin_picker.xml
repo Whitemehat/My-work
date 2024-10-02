@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:id="@id/toolbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:importantForAccessibility="no" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_arrow_back" style="@style/CloseButton" />
+            <Space android:id="@id/spacer" android:layout_width="@dimen/view_size_48" android:layout_height="@dimen/view_size_48" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/closeButton" />
+            <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/choose_coin" android:maxLines="1" android:layout_marginEnd="@dimen/view_size_8" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="@id/closeButton" app:layout_constraintEnd_toStartOf="@id/spacer" app:layout_constraintStart_toEndOf="@id/closeButton" app:layout_constraintTop_toTopOf="@id/closeButton" style="@style/Title20Semibold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.toshi.view.custom.ToolbarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:scrollbarThumbVertical="@android:color/darker_gray" android:orientation="vertical" android:id="@id/chooseCoinRecyclerView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarLayout" />
+    <ProgressBar android:id="@id/progress" android:layout_width="@dimen/height_progress_bar" android:layout_height="@dimen/height_progress_bar" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

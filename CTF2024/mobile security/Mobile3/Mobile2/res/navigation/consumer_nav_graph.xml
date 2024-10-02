@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/consumer_nav_graph" app:startDestination="@id/consumerInterstitialFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="consumerInterstitialFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerInterstitialFragment" android:id="@id/consumerInterstitialFragment">
+        <action android:id="@id/action_consumerInterstitialFragment_to_consumerFragment" app:destination="@id/consumerFragment" />
+        <action android:id="@id/action_consumerInterstitialFragment_to_consumerOnboardingFragment" app:destination="@id/consumerOnboardingFragment" />
+    </fragment>
+    <fragment android:label="consumerFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerFragment" android:id="@id/consumerFragment">
+        <action android:id="@id/action_consumerFragment_to_consumerAmountPickerFragment" app:destination="@id/consumerAmountPickerFragment" />
+        <action android:id="@id/action_consumerFragment_to_consumerAddCardFragment" app:destination="@id/consumerAddCardFragment" />
+        <action android:id="@id/action_consumerFragment_to_consumerAvailablePaymentMethodsFragment" app:destination="@id/consumerAvailablePaymentMethodsFragment" />
+    </fragment>
+    <fragment android:label="consumerOnboardingFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerOnboardingFragment" android:id="@id/consumerOnboardingFragment">
+        <action android:id="@id/action_consumerOnboardingFragment_to_consumerFragment" app:destination="@id/consumerFragment" />
+    </fragment>
+    <fragment android:label="ConsumerCardCDVFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerCardCDVFragment" android:id="@id/consumerCardCDVFragment" />
+    <fragment android:label="ConsumerAmountPickerFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerAmountPickerFragment" android:id="@id/consumerAmountPickerFragment">
+        <action android:id="@id/action_consumerAmountPickerFragment_to_consumerTransferConfirmationFragment" app:destination="@id/consumerTransferConfirmationFragment" />
+        <action android:id="@id/action_consumerAmountPickerFragment_to_consumerTransferMethodsFragment" app:destination="@id/consumerTransferMethodsFragment" />
+    </fragment>
+    <fragment android:label="ConsumerSendConfirmationFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerTransferConfirmationFragment" android:id="@id/consumerTransferConfirmationFragment">
+        <action android:id="@id/action_consumerTransferConfirmationFragment_to_consumerSendTwoFactorFragment" app:destination="@id/consumerSendTwoFactorFragment" />
+        <action android:id="@id/action_consumerTransferConfirmationFragment_to_consumerTransferInitiatedFragment" app:destination="@id/consumerTransferInitiatedFragment" />
+        <action android:id="@id/action_consumerTransferConfirmationFragment_to_consumerTransferMethodsFragment" app:destination="@id/consumerTransferMethodsFragment" />
+        <action android:id="@id/action_consumerTransferConfirmationFragment_to_consumerSecure3DVerificationFragment" app:destination="@id/consumerSecure3DVerificationFragment" />
+    </fragment>
+    <dialog android:label="ConsumerTransferMethodsFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerTransferMethodsFragment" android:id="@id/consumerTransferMethodsFragment">
+        <action android:id="@id/action_consumerTransferMethodsFragment_to_consumerAvailablePaymentMethodsFragment" app:destination="@id/consumerAvailablePaymentMethodsFragment" />
+        <action android:id="@id/action_consumerTransferMethodsFragment_to_consumerCDVFragment" app:destination="@id/consumerCardCDVFragment" />
+    </dialog>
+    <fragment android:label="ConsumerSecure3DVerificationFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerSecure3DVerificationFragment" android:id="@id/consumerSecure3DVerificationFragment" />
+    <fragment android:label="ConsumerSendTwoFactorFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerSendTwoFactorFragment" android:id="@id/consumerSendTwoFactorFragment">
+        <action android:id="@id/action_consumerSendTwoFactorFragment_to_consumerTransactionInitiatedFragment" app:destination="@id/consumerTransferInitiatedFragment" />
+    </fragment>
+    <fragment android:label="ConsumerTransferInitiatedFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerTransferInitiatedFragment" android:id="@id/consumerTransferInitiatedFragment" />
+    <fragment android:label="ConsumerAvailablePaymentMethodsFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerAvailablePaymentMethodsFragment" android:id="@id/consumerAvailablePaymentMethodsFragment">
+        <action android:id="@id/action_consumerAvailablePaymentMethodsFragment_to_consumerAddCardFragment" app:destination="@id/consumerAddCardFragment" />
+    </fragment>
+    <fragment android:label="ConsumerAddPaymentMethodFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerAddCardFragment" android:id="@id/consumerAddCardFragment">
+        <action android:id="@id/action_consumerAddCardFragment_to_consumerCardCDVFragment" app:destination="@id/consumerCardCDVFragment" />
+    </fragment>
+</navigation>

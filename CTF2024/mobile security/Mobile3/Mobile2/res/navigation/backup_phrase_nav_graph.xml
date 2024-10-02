@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/backup_phrase_nav_graph" app:startDestination="@id/backupRecoveryPhraseFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <fragment android:label="BackupRecoveryPhraseFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.BackupRecoveryPhraseFragment" android:id="@id/backupRecoveryPhraseFragment">
+        <action android:id="@id/action_backupRecoveryPhraseFragment_to_manualBackupFragment" app:destination="@id/manualBackupFragment" />
+        <action android:id="@id/action_backupRecoveryPhraseFragment_to_createPasswordInfoFragment" app:destination="@id/createPasswordInfoFragment" />
+    </fragment>
+    <fragment android:label="CreatePasswordInfoFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.CreatePasswordInfoFragment" android:id="@id/createPasswordInfoFragment">
+        <action android:id="@id/action_createPasswordInfoFragment_to_createPasswordFragment" app:destination="@id/createPasswordFragment" />
+    </fragment>
+    <fragment android:label="ManualBackupFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.ManualBackupFragment" android:id="@id/manualBackupFragment">
+        <action android:id="@id/action_manualBackupFragment_to_verifyManualBackupFragment" app:destination="@id/verifyManualBackupFragment" />
+    </fragment>
+    <fragment android:label="VerifyManualBackupFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.VerifyManualBackupFragment" android:id="@id/verifyManualBackupFragment" />
+    <fragment android:label="CreatePasswordFragment" android:name="com.coinbase.wallet.features.cloudbackup.view.CreatePasswordFragment" android:id="@id/createPasswordFragment" />
+</navigation>

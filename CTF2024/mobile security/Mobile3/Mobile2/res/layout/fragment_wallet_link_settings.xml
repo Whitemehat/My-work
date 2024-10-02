@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/windowBackgroundSecondary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/toolbar" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:tint="@color/textColorContrast" app:srcCompat="@drawable/ic_arrow_back" style="@style/CloseButton" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_link" style="@style/Toolbar.TitleText" />
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/addButton" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="false" app:srcCompat="@drawable/ic_add" style="@style/CloseButton" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvWalletLinkItems" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <ProgressBar android:id="@id/progressBar" android:visibility="gone" android:layout_width="@dimen/view_size_56" android:layout_height="@dimen/view_size_56" android:indeterminateTint="@color/colorPrimary" app:layout_constraintBottom_toBottomOf="@id/rvWalletLinkItems" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/rvWalletLinkItems" />
+</androidx.constraintlayout.widget.ConstraintLayout>

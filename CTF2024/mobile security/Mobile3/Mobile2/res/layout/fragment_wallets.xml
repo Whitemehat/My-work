@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:tint="@color/textColorContrast" app:srcCompat="@drawable/ic_arrow_back" style="@style/CloseButton" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet" style="@style/Toolbar.TitleText" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/wallets" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

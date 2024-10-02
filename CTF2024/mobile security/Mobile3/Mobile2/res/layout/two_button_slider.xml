@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/twoButtonSliderContainer" android:background="@drawable/background_with_radius_grey5_16dp" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.coinbase.wallet.application.view.custom.ViewPagerHeader android:id="@id/twoButtonSlider" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutDescription="@xml/two_button_slider_scene">
+        <View android:id="@id/backgroundLeft" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/backgroundRight" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <View android:id="@id/backgroundRight" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/backgroundLeft" app:layout_constraintTop_toTopOf="parent" />
+        <View android:id="@id/buttonBackground" android:background="@drawable/background_with_radius_white_14dp" android:layout_width="0.0dip" android:layout_height="@dimen/view_size_40" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textStyle="bold" android:gravity="center" android:id="@id/leftButtonText" android:layout_width="0.0dip" android:layout_height="@dimen/view_size_40" android:text="Address" app:layout_constraintEnd_toStartOf="@id/rightButtonText" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textStyle="bold" android:gravity="center" android:id="@id/rightButtonText" android:layout_width="0.0dip" android:layout_height="@dimen/view_size_40" android:text="Username" app:layout_constraintEnd_toStartOf="@id/leftButtonText" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </com.coinbase.wallet.application.view.custom.ViewPagerHeader>
+    <FrameLayout android:id="@id/touchBlocker" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

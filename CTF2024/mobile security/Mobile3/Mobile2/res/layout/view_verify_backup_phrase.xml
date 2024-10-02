@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="@dimen/space_unused_dimension" android:layout_height="@dimen/view_size_16" />
+    <com.google.android.flexbox.FlexboxLayout android:orientation="horizontal" android:id="@id/userInputtedPhraseView" android:background="@drawable/backup_phrase_background_drop" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/view_size_16" android:layout_marginRight="@dimen/view_size_16" app:flexWrap="wrap" app:justifyContent="center" />
+    <Space android:layout_width="@dimen/space_unused_dimension" android:layout_height="@dimen/view_size_24" />
+    <com.google.android.flexbox.FlexboxLayout android:id="@id/shuffledPhraseView" android:padding="2.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/view_size_16" android:layout_marginRight="@dimen/view_size_16" app:flexWrap="wrap" app:justifyContent="center" />
+    <Space android:layout_width="@dimen/space_unused_dimension" android:layout_height="@dimen/view_size_16" />
+</LinearLayout>

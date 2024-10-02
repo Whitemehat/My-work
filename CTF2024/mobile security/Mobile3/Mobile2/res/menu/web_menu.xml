@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/reload" android:title="@string/reload" app:showAsAction="never" />
+    <item android:id="@id/stopLoading" android:title="@string/stop_loading" app:showAsAction="never" />
+    <item android:id="@id/add_bookmark" android:title="@string/add_to_bookmarks" app:showAsAction="never" />
+    <item android:id="@id/remove_bookmark" android:title="@string/remove_bookmark" app:showAsAction="never" />
+    <item android:id="@id/share" android:title="@string/share" app:showAsAction="never" />
+</menu>

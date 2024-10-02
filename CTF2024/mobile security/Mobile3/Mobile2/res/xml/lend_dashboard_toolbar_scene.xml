@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition android:id="@id/lendToolbarExpanded" motion:constraintSetEnd="@id/expandedConstraintSet" motion:constraintSetStart="@id/collapsedConstraintSet" motion:duration="300" />
+    <ConstraintSet android:id="@id/collapsedConstraintSet">
+        <Constraint android:id="@id/statusBarSpace" android:layout_width="0.0dip" android:layout_height="wrap_content" android:alpha="-1.0" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/background" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="0.0dip" android:alpha="0.0" motion:layout_constraintBottom_toBottomOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/title" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toBottomOf="parent" style="@style/TextTitle" />
+        <Constraint android:textColor="@color/grey_30" android:id="@id/subtitle" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toBottomOf="@id/title" style="@style/Toolbar.SubTitleText" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/expandedConstraintSet">
+        <Constraint android:id="@id/statusBarSpace" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="wrap_content" android:alpha="1.0" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/background" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="0.0dip" android:alpha="1.0" motion:layout_constraintBottom_toBottomOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@id/title" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="1.0" motion:layout_constraintBottom_toTopOf="@id/subtitle" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toBottomOf="@id/statusBarSpace" style="@style/TextTitle" />
+        <Constraint android:textColor="@color/grey_30" android:id="@id/subtitle" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="1.0" motion:layout_constraintBottom_toBottomOf="@id/closeButton" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toBottomOf="@id/title" style="@style/Toolbar.SubTitleText" />
+    </ConstraintSet>
+</MotionScene>

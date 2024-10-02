@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_tab_wallet" android:id="@id/action_wallet" android:title="@string/tab_wallet" android:iconTint="@color/grey_50" />
+    <item android:icon="@drawable/ic_tab_dapps" android:id="@id/action_dapps" android:title="@string/tab_dapps" android:iconTint="@color/grey_50" />
+    <item android:icon="@drawable/ic_tab_settings" android:id="@id/action_settings" android:title="@string/tab_settings" android:iconTint="@color/grey_50" />
+</menu>

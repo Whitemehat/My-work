@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/pageScrollView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/lendAgreementCheckbox" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" app:layout_constraintVertical_chainStyle="packed">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/illustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_16" android:layout_marginStart="@dimen/view_size_16" android:layout_marginEnd="@dimen/view_size_16" style="@style/Title20Semibold" />
+            <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_8" android:fontFamily="@font/coinbase_sans" android:layout_marginStart="@dimen/view_size_16" android:layout_marginEnd="@dimen/view_size_16" style="@style/Default16Regular" />
+        </LinearLayout>
+    </ScrollView>
+    <CheckBox android:theme="@style/CheckBox" android:textColor="@color/grey_80" android:id="@id/lendAgreementCheckbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_8" android:layout_marginBottom="@dimen/view_size_8" android:text="@string/lend_user_agreement_checkbox_text" android:layout_marginStart="@dimen/view_size_16" android:layout_marginEnd="@dimen/view_size_16" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/pageScrollView" style="@style/Detail13Regular" />
+</androidx.constraintlayout.widget.ConstraintLayout>

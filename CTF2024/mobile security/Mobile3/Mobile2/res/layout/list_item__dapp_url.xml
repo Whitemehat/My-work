@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:padding="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorPrimary" android:id="@id/query" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NormalEllipsizeEnd" />
+    <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorSecondary" android:id="@id/postfix" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_with_google" style="@style/NormalEllipsizeEnd" />
+</LinearLayout>

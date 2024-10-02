@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="wallet_link_connections">
+        <item quantity="other">%d Connections</item>
+        <item quantity="one">%d Connection</item>
+    </plurals>
+    <plurals name="x_results">
+        <item quantity="other">%1$s Results</item>
+        <item quantity="one">%1$s Result</item>
+    </plurals>
+</resources>

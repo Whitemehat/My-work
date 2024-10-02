@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/grey_50" android:id="@id/sliderInterestText" android:paddingTop="@dimen/view_size_32" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" android:layout_marginStart="@dimen/view_size_32" android:layout_marginEnd="@dimen/view_size_32" style="@style/Detail13Regular" />
+    <SeekBar android:id="@id/amountSlider" android:paddingTop="@dimen/view_size_32" android:paddingBottom="@dimen/view_size_32" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progress="0" android:progressDrawable="@drawable/lend_slider_background" android:thumb="@drawable/lend_slider_thumb" android:layout_marginStart="@dimen/view_size_32" android:layout_marginEnd="@dimen/view_size_32" android:splitTrack="false" android:thumbTint="@color/primary_blue" />
+</merge>

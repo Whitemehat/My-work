@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/view_size_16" android:paddingRight="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="54.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorPrimary" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/currency" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chevron_right" />
+</FrameLayout>

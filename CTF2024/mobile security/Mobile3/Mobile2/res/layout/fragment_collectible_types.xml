@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coinbase.wallet.application.view.custom.TopAwareRecyclerView android:id="@id/collectiblesRecyclerView" android:paddingTop="@dimen/view_size_8" android:paddingBottom="@dimen/view_size_8" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="always" android:paddingStart="@dimen/view_size_8" android:paddingEnd="@dimen/view_size_8" />
+    <androidx.core.widget.NestedScrollView android:id="@id/emptyState" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_72">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/view_size_16" android:visibility="visible" android:layout_width="@dimen/image_size_large_128" android:layout_height="@dimen/image_size_large_128" android:src="@drawable/collectible_empty" />
+            <TextView android:textColor="@color/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@id/emptyStateTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextBold" />
+            <TextView android:textColor="@color/textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/empty_state_collectibles_message" android:textAlignment="center" style="@style/TextDetail" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar android:layout_gravity="center|top" android:id="@id/loadingSpinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_16" android:indeterminate="true" android:indeterminateTint="@color/colorPrimary" android:indeterminateTintMode="src_atop" />
+</FrameLayout>

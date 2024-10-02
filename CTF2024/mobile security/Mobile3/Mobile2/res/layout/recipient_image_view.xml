@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_20" android:textColor="@color/primary_blue" android:gravity="center" android:layout_gravity="center" android:id="@id/monogram" android:background="@drawable/white_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/view_size_4" android:elevation="2.0dip" app:autoSizeMinTextSize="@dimen/text_size_20" app:autoSizeStepGranularity="1.0sp" app:autoSizeTextType="uniform" />
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/coinbaseIcon" android:background="@drawable/blue_circle" android:padding="@dimen/view_size_8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/view_size_4" app:layout_constraintDimensionRatio="1:1" app:srcCompat="@drawable/ic_send_coinbase" />
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/walletIcon" android:background="@drawable/white_circle" android:padding="@dimen/view_size_12" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/view_size_4" android:src="@drawable/ic_tx_wallet" android:elevation="2.0dip" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/primary_blue" />
+    <item android:gravity="center" android:height="28.599976dip" android:width="282.0dip" android:drawable="@drawable/ic_wallet_wordmark_white" />
+</layer-list>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/avatarImageView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/grey_0" app:civ_border_color="@color/grey_0" app:civ_border_width="@dimen/view_size_1" />
+    <TextView android:textColor="@color/grey_5" android:gravity="center" android:id="@id/defaultTokenAvatar" android:background="@drawable/default_token_grey_circular_bg" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:paddingStart="@dimen/view_size_2" android:paddingEnd="@dimen/view_size_2" app:autoSizeMaxTextSize="@dimen/text_size_default" app:autoSizeMinTextSize="8.0sp" app:autoSizeTextType="uniform" style="@style/DefaultBold16Medium" />
+</merge>

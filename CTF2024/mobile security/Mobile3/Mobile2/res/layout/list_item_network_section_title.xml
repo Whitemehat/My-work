@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@id/networkSectionHeader" android:layout_width="fill_parent" android:layout_height="@dimen/sub_title_list_height" android:text="@string/change_network" style="@style/ListSubTitle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/walletCardBackground" android:background="@drawable/background_rounded_top_corners" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/view_size_minus_16" android:fillViewport="true" android:transitionName="@string/shared_element_transition_wallet_card"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/loadingSpinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_8" />
+</FrameLayout>

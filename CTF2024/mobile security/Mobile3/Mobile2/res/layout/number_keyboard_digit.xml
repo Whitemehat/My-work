@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:textSize="@dimen/text_size_20" android:background="@drawable/button_digit_background" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_56" android:fontFamily="@font/coinbase_sans"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

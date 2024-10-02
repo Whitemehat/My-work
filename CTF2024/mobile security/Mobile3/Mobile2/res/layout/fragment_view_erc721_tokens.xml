@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/toolbar" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageButton android:id="@id/closeButton" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="centerInside" android:paddingStart="@dimen/view_size_16" android:paddingEnd="@dimen/view_size_16" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_arrow_back" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:id="@id/toolbarTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TransparentToolbar.TitleText" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/refreshLayout" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/view_size_16" android:paddingEnd="@dimen/view_size_16" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="2" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView android:textSize="@dimen/text_size_instruction" android:textColor="@color/textColorPrimary" android:gravity="center" android:id="@id/error" android:padding="@dimen/view_size_32" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/collectible_items_error" style="@style/TextStyleMedium" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.coinbase.wallet.commonui.views.StatusBarSpace android:id="@id/statusBarSpace" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/view_size_16" android:overScrollMode="ifContentScrolls" app:layout_constraintBottom_toTopOf="@id/acknowledgeButton" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/disclosureIllustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:minHeight="@dimen/view_size_80" />
+            <TextView android:id="@id/disclosureTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/view_size_28" android:layout_marginTop="@dimen/view_size_32" android:layout_marginRight="@dimen/view_size_28" android:text="@string/swap_disclosure_title" android:layout_marginHorizontal="@dimen/view_size_28" style="@style/Title20Semibold" />
+            <TextView android:id="@id/disclosureBody" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/view_size_28" android:layout_marginTop="@dimen/view_size_16" android:layout_marginRight="@dimen/view_size_28" android:layout_marginBottom="@dimen/view_size_16" android:lineSpacingMultiplier="1.2" android:layout_marginHorizontal="@dimen/view_size_28" style="@style/Default16Regular" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@id/acknowledgeButton" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_56" android:layout_marginLeft="@dimen/view_size_24" android:layout_marginRight="@dimen/view_size_24" android:layout_marginBottom="@dimen/view_size_16" android:text="@string/i_understand" android:stateListAnimator="@null" android:layout_marginHorizontal="@dimen/view_size_24" app:layout_constraintBottom_toBottomOf="parent" style="@style/BlueFlatButton" />
+    <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:contentDescription="@string/close" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/statusBarSpace" app:srcCompat="@drawable/ic_close_black_24dp" style="@style/CloseButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/windowBackgroundSecondary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:tint="@color/textColorContrast" app:srcCompat="@drawable/ic_arrow_back" style="@style/CloseButton" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/advanced_title" style="@style/Toolbar.TitleText" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/sub_title_list_height" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/wallet" android:background="@color/windowBackground" android:paddingLeft="@dimen/view_size_16" android:paddingTop="@dimen/list_item_vertical_margin" android:paddingRight="@dimen/view_size_16" android:paddingBottom="@dimen/list_item_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground">
+        <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/active_wallet" />
+        <Space android:layout_width="@dimen/view_size_12" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorSecondary" android:ellipsize="end" android:gravity="end" android:id="@id/currentWallet" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <Space android:layout_width="@dimen/view_size_20" android:layout_height="@dimen/space_unused_dimension" />
+        <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chevron_right" />
+    </LinearLayout>
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/border_size_default" android:layout_marginLeft="@dimen/view_size_16" android:layout_marginRight="@dimen/view_size_16" />
+    <Space android:layout_width="@dimen/space_unused_dimension" android:layout_height="18.0dip" />
+    <TextView android:textSize="@dimen/text_size_default" android:textColor="@color/textColorSecondaryTransparent" android:id="@id/developMessage" android:paddingLeft="@dimen/view_size_16" android:paddingRight="@dimen/view_size_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/develop_message" />
+    <Space android:layout_width="@dimen/space_unused_dimension" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

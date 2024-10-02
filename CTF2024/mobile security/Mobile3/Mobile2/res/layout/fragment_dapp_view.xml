@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.toshi.view.custom.ToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/elevation_default">
+        <com.toshi.view.custom.AddressBarInputView android:id="@id/input" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.coinbase.cipherwebview.CipherWebView android:id="@id/cipherWebView" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:background="@color/web_view_address_bar_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <com.toshi.view.custom.ProgressBar android:id="@id/progressBar" android:layout_width="fill_parent" android:layout_height="@dimen/progress_height" />
+        <TextView android:textSize="@dimen/text_size_default" android:textColor="@color/textColorContrast" android:gravity="center" android:id="@id/topBanner" android:background="@color/webViewTopBanner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/web_view_top_banner_height" android:maxLines="1" />
+        <com.toshi.view.custom.ClickableRecyclerView android:id="@id/searchDappsContainer" android:background="@color/semi_transparent_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

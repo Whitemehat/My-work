@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/debug_nav_graph" app:startDestination="@id/debugMenuFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <fragment android:label="DebugMenuFragment" android:name="com.coinbase.wallet.features.debugmenu.views.DebugMenuFragment" android:id="@id/debugMenuFragment">
+        <action android:id="@id/action_debugMenuFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+        <action android:id="@id/action_debugMenuFragment_to_swapAmountPickerFragment" app:destination="@id/swapAmountPickerFragment" />
+        <action android:id="@id/action_debugMenuFragment_to_swapAssetPickerFragment" app:destination="@id/swapAssetPickerFragment" />
+        <action android:id="@id/action_debugMenuFragment_to_swapConfirmationFragment" app:destination="@id/swapConfirmationFragment" />
+        <action android:id="@id/action_debugMenuFragment_to_consumerAvailablePaymentMethodsFragment" app:destination="@id/consumerAvailablePaymentMethodsFragment" />
+        <action android:id="@id/action_debugMenuFragment_to_consumerTransferConfirmationFragment" app:destination="@id/consumerTransferConfirmationFragment" />
+    </fragment>
+    <fragment android:label="MainSwapFragment" android:name="com.coinbase.wallet.features.swap.views.SwapAmountPickerFragment" android:id="@id/swapAmountPickerFragment">
+        <action android:id="@id/action_swapAmountPickerFragment_to_swapAssetPickerFragment" app:destination="@id/swapAssetPickerFragment" />
+        <action android:id="@id/action_swapAmountPickerFragment_to_swapConfirmationFragment" app:destination="@id/swapConfirmationFragment" />
+    </fragment>
+    <fragment android:label="SwapAssetPickerFragment" android:name="com.coinbase.wallet.features.swap.views.SwapAssetPickerFragment" android:id="@id/swapAssetPickerFragment" />
+    <fragment android:label="SwapConfirmationFragment" android:name="com.coinbase.wallet.features.swap.views.SwapConfirmationFragment" android:id="@id/swapConfirmationFragment">
+        <action android:id="@id/action_swapConfirmationFragment_to_swapCompleteFragment" app:destination="@id/swapCompleteFragment" />
+    </fragment>
+    <fragment android:label="SwapCompleteFragment" android:name="com.coinbase.wallet.features.swap.views.SwapCompleteFragment" android:id="@id/swapCompleteFragment" />
+    <fragment android:label="ConsumerAvailablePaymentMethodsFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerAvailablePaymentMethodsFragment" android:id="@id/consumerAvailablePaymentMethodsFragment">
+        <action android:id="@id/action_consumerAvailablePaymentMethodsFragment_to_consumerAddCardFragment" app:destination="@id/consumerAddCardFragment" />
+    </fragment>
+    <fragment android:label="ConsumerAddPaymentMethodFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerAddCardFragment" android:id="@id/consumerAddCardFragment">
+        <action android:id="@id/action_consumerAddCardFragment_to_consumerCardCDVFragment" app:destination="@id/consumerCardCDVFragment" />
+    </fragment>
+    <fragment android:label="ConsumerCardCDVFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerCardCDVFragment" android:id="@id/consumerCardCDVFragment" />
+    <fragment android:label="ConsumerTransferConfirmationFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerTransferConfirmationFragment" android:id="@id/consumerTransferConfirmationFragment">
+        <action android:id="@id/action_consumerTransferConfirmationFragment_to_consumerTransferMethodsFragment" app:destination="@id/consumerTransferMethodsFragment" />
+    </fragment>
+    <dialog android:label="ConsumerTransferMethodsFragment" android:name="com.coinbase.wallet.consumer.views.ConsumerTransferMethodsFragment" android:id="@id/consumerTransferMethodsFragment" />
+</navigation>

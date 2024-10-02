@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/wallet_nav_graph" app:startDestination="@id/walletFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/backup_phrase_nav_graph" />
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <include app:graph="@navigation/consumer_nav_graph" />
+    <fragment android:label="WalletFragment" android:name="com.coinbase.wallet.application.view.HomeFragment" android:id="@id/walletFragment">
+        <action android:id="@id/action_walletFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+        <action android:id="@id/action_walletFragment_to_receiveCoinPickerFragment" app:destination="@id/receiveCoinPickerFragment" />
+        <action android:id="@id/action_walletFragment_to_sendCoinPickerFragment" app:destination="@id/sendCoinPickerFragment" />
+        <action android:id="@id/action_walletFragment_to_viewErc721TokensFragment" app:destination="@id/viewCollectibleTypeFragment" />
+        <action android:id="@id/action_walletFragment_to_walletDetailFragment" app:destination="@id/coinDetailsFragment" />
+        <action android:id="@id/action_walletFragment_to_consumerNavGraph" app:destination="@id/consumer_nav_graph" />
+        <action android:id="@id/action_walletFragment_to_universalQRScannerFragment" app:destination="@id/universalQRScannerFragment" />
+        <action android:id="@id/action_walletFragment_to_sendAmountPickerFragment" app:destination="@id/amountPickerFragment" />
+        <action android:id="@id/action_walletFragment_to_sendDestinationPickerFragment" app:destination="@id/sendDestinationPickerFragment" />
+        <action android:id="@id/action_walletFragment_to_lendInterstitialFragment" app:destination="@id/lendInterstitialFragment" />
+        <action android:id="@id/action_walletFragment_to_swapInterstitialFragment" app:destination="@id/swapInterstitialFragment" />
+    </fragment>
+    <fragment android:label="ReceiveCoinPickerFragment" android:name="com.toshi.view.fragment.ReceiveCoinPickerFragment" android:id="@id/receiveCoinPickerFragment">
+        <action android:id="@id/action_receiveCoinPickerFragment_to_displayCoinAddressFragment" app:destination="@id/displayCoinAddressFragment" app:exitAnim="@anim/fade_out_short" app:launchSingleTop="true" app:popExitAnim="@anim/fade_out_short" />
+    </fragment>
+    <fragment android:label="DisplayCoinAddressFragment" android:name="com.toshi.view.fragment.DisplayCoinAddressFragment" android:id="@id/displayCoinAddressFragment">
+        <action android:id="@id/action_displayCoinAddressFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+    </fragment>
+    <fragment android:label="SendCoinPickerFragment" android:name="com.coinbase.wallet.features.wallets.views.SendCoinPickerFragment" android:id="@id/sendCoinPickerFragment">
+        <action android:id="@id/action_sendCoinPickerFragment_to_sendAmountPickerFragment" app:destination="@id/amountPickerFragment" app:launchSingleTop="true" />
+        <action android:id="@id/action_sendCoinPickerFragment_to_sendDestinationPickerFragment" app:destination="@id/sendDestinationPickerFragment" app:launchSingleTop="true" />
+        <action android:id="@id/action_sendCoinPickerFragment_to_receiveCoinPickerFragment" app:destination="@id/receiveCoinPickerFragment" app:launchSingleTop="true" />
+    </fragment>
+    <persistedFragment android:label="CollectibleDetailFragment" android:name="com.toshi.view.fragment.CollectibleDetailFragment" android:id="@id/collectibleDetailFragment" />
+    <fragment android:label="CoinsFragment" android:name="com.coinbase.wallet.features.wallets.views.WalletsTabFragment" android:id="@id/coinsFragment" />
+    <fragment android:label="CollectibleTypesFragment" android:name="com.coinbase.wallet.features.collectibles.CollectibleTypesTabFragment" android:id="@id/collectibleTypesFragment" />
+    <fragment android:label="ViewCollectibleTypeFragment" android:name="com.toshi.view.fragment.ViewCollectibleTypeFragment" android:id="@id/viewCollectibleTypeFragment">
+        <action android:id="@id/action_viewCollectibleTypeFragment_to_collectibleDetailFragment" app:destination="@id/collectibleDetailFragment" />
+    </fragment>
+    <fragment android:label="WalletDetailsFragment" android:name="com.toshi.view.fragment.coin.WalletDetailFragment" android:id="@id/coinDetailsFragment">
+        <action android:id="@id/action_walletDetailFragment_to_sendAmountPickerFragment" app:destination="@id/amountPickerFragment" app:launchSingleTop="true" />
+        <action android:id="@id/action_walletDetailFragment_to_displayCoinAddressFragment" app:destination="@id/displayCoinAddressFragment" app:launchSingleTop="true" />
+        <action android:id="@id/action_coinDetailsFragment_to_txHistoryDetailFragment" app:destination="@id/txHistoryDetailFragment" />
+        <action android:id="@id/action_coinDetailsFragment_to_swapInterstitialFragment" app:destination="@id/swapInterstitialFragment" />
+    </fragment>
+    <fragment android:label="UniversalQRScannerFragment" android:name="com.toshi.qr.view.fragment.UniversalQRScannerFragment" android:id="@id/universalQRScannerFragment">
+        <action android:id="@id/action_universalQRScannerFragment_to_sendCoinPickerFragment" app:destination="@id/sendCoinPickerFragment" />
+        <action android:id="@id/action_universalQRScannerFragment_to_sendAmountPickerFragment" app:destination="@id/amountPickerFragment" />
+        <action android:id="@id/action_universalQRScannerFragment_to_receiveCoinToReceiveFragment" app:destination="@id/receiveCoinPickerFragment" />
+        <action android:id="@id/action_universalQRScannerFragment_to_sendDestinationPickerFragment" app:destination="@id/sendDestinationPickerFragment" />
+        <action android:id="@id/action_universalQRScannerFragment_to_completeFragment" app:destination="@id/completeFragment" />
+    </fragment>
+    <fragment android:label="ConfirmationFragment" android:name="com.coinbase.wallet.features.send.views.ConfirmationFragment" android:id="@id/confirmationFragment">
+        <action android:id="@id/action_confirmationFragment_to_completeFragment" app:destination="@id/completeFragment" />
+        <action android:id="@id/action_confirmationFragment_to_lendDashboardFragment" app:destination="@id/lendDashboardFragment" />
+        <action android:id="@id/action_confirmationFragment_to_adjustableMinerFeeFragment" app:destination="@id/adjustableMinerFeeFragment" />
+        <action android:id="@id/action_confirmationFragment_to_adjustableMinerFee1559Fragment" app:destination="@id/adjustableMinerFee1559Fragment" />
+    </fragment>
+    <fragment android:label="CompleteFragment" android:name="com.coinbase.wallet.features.send.views.CompleteFragment" android:id="@id/completeFragment" />
+    <fragment android:label="TxHistoryDetailFragment" android:name="com.coinbase.wallet.txhistory.views.TxHistoryDetailFragment" android:id="@id/txHistoryDetailFragment" />
+    <fragment android:label="SendAmountPickerFragment" android:name="com.coinbase.wallet.features.send.views.AmountPickerFragment" android:id="@id/amountPickerFragment">
+        <action android:id="@id/action_sendAmountPickerFragment_to_sendDestinationPickerFragment" app:destination="@id/sendDestinationPickerFragment" />
+        <action android:id="@id/action_sendAmountPickerFragment_to_sendCoinPickerFragment" app:destination="@id/sendCoinPickerFragment" />
+        <action android:id="@id/action_sendAmountPickerFragment_to_confirmationFragment" app:destination="@id/confirmationFragment" />
+        <action android:id="@id/action_sendAmountPickerFragment_to_backupRecoveryPhraseFragment" app:destination="@id/backup_phrase_nav_graph" />
+    </fragment>
+    <fragment android:label="SendDestinationPickerFragment" android:name="com.coinbase.wallet.features.send.views.SendDestinationPickerFragment" android:id="@id/sendDestinationPickerFragment">
+        <action android:id="@id/action_destinationPickerFragment_to_universalQRScannerFragment" app:destination="@id/universalQRScannerFragment" />
+        <action android:id="@id/action_destinationPickerFragment_to_confirmationFragment" app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment android:label="LendCoinPickerFragment" android:name="com.coinbase.wallet.features.lend.views.LendCoinPickerFragment" android:id="@id/lendCoinPickerFragment">
+        <action android:id="@id/action_lendCoinPickerFragment_to_lendProviderPickerFragment" app:destination="@id/lendProviderPickerFragment" />
+        <action android:id="@id/action_lendCoinPickerFragment_to_swapInterstitialFragment" app:destination="@id/swapInterstitialFragment" />
+    </fragment>
+    <dialog android:label="fundActionSheetFragment" android:name="com.toshi.view.fragment.FundActionSheetFragment" android:id="@id/fundActionSheetFragment" />
+    <fragment android:label="LendUserAgreementFragment" android:name="com.coinbase.wallet.features.lend.views.LendUserAgreementFragment" android:id="@id/lendUserAgreementFragment">
+        <action android:id="@id/action_lendUserAgreementFragment_to_lendDashboardFragment" app:destination="@id/lendDashboardFragment" />
+        <action android:id="@id/action_lendUserAgreementFragment_to_lendCoinPickerFragment" app:destination="@id/lendCoinPickerFragment" />
+    </fragment>
+    <fragment android:label="LendDashboardFragment" android:name="com.coinbase.wallet.features.lend.views.LendDashboardFragment" android:id="@id/lendDashboardFragment">
+        <action android:id="@id/action_lendDashboardFragment_to_sendAmountPickerFragment" app:destination="@id/amountPickerFragment" />
+        <action android:id="@id/action_lendDashboardFragment_to_lendCoinPickerFragment" app:destination="@id/lendCoinPickerFragment" />
+    </fragment>
+    <fragment android:label="LendFragment" android:name="com.coinbase.wallet.features.lend.views.LendInterstitialFragment" android:id="@id/lendInterstitialFragment">
+        <action android:id="@id/action_lendInterstitialFragment_to_lendUserAgreementFragment" app:destination="@id/lendUserAgreementFragment" />
+        <action android:id="@id/action_lendInterstitialFragment_to_lendDashboard" app:destination="@id/lendDashboardFragment" />
+        <action android:id="@id/action_lendInterstitialFragment_to_lendCoinPickerFragment" app:destination="@id/lendCoinPickerFragment" />
+    </fragment>
+    <fragment android:label="LendProviderPickerFragment" android:name="com.coinbase.wallet.features.lend.views.LendProviderPickerFragment" android:id="@id/lendProviderPickerFragment">
+        <action android:id="@id/action_lendProviderPickerFragment_to_amountPickerFragment" app:destination="@id/amountPickerFragment" />
+    </fragment>
+    <fragment android:label="SwapAmountPickerFragment" android:name="com.coinbase.wallet.features.swap.views.SwapAmountPickerFragment" android:id="@id/swapAmountPickerFragment">
+        <action android:id="@id/action_swapAmountPickerFragment_to_swapAssetPickerFragment" app:destination="@id/swapAssetPickerFragment" />
+        <action android:id="@id/action_swapAmountPickerFragment_to_swapConfirmationFragment" app:destination="@id/swapConfirmationFragment" />
+    </fragment>
+    <fragment android:label="SwapAssetPickerFragment" android:name="com.coinbase.wallet.features.swap.views.SwapAssetPickerFragment" android:id="@id/swapAssetPickerFragment" />
+    <fragment android:label="SwapConfirmationFragment" android:name="com.coinbase.wallet.features.swap.views.SwapConfirmationFragment" android:id="@id/swapConfirmationFragment">
+        <action android:id="@id/action_swapConfirmationFragment_to_swapCompleteFragment" app:destination="@id/swapCompleteFragment" />
+    </fragment>
+    <fragment android:label="SwapCompleteFragment" android:name="com.coinbase.wallet.features.swap.views.SwapCompleteFragment" android:id="@id/swapCompleteFragment">
+        <action android:id="@id/action_swapCompleteFragment_to_coinDetailsFragment" app:destination="@id/coinDetailsFragment" />
+    </fragment>
+    <fragment android:label="SwapInterstitialFragment" android:name="com.coinbase.wallet.features.swap.views.SwapInterstitialFragment" android:id="@id/swapInterstitialFragment">
+        <action android:id="@id/action_swapInterstitialFragment_to_swapAmountPickerFragment" app:destination="@id/swapAmountPickerFragment" />
+        <action android:id="@id/action_swapInterstitialFragment_to_swapUserAgreementFragment" app:destination="@id/swapUserAgreementFragment" />
+    </fragment>
+    <fragment android:label="SwapUserAgreementFragment" android:name="com.coinbase.wallet.features.swap.views.SwapDisclaimerFragment" android:id="@id/swapUserAgreementFragment">
+        <action android:id="@id/action_swapUserAgreementFragment_to_swapAmountPickerFragment" app:destination="@id/swapAmountPickerFragment" />
+    </fragment>
+    <dialog android:label="AdjustableMinerFeeFragment" android:name="com.coinbase.wallet.features.send.views.AdjustableMinerFeeFragment" android:id="@id/adjustableMinerFeeFragment" />
+    <dialog android:label="AdjustableMinerFee1559Fragment" android:name="com.coinbase.wallet.features.send.views.AdjustableMinerFee1559Fragment" android:id="@id/adjustableMinerFee1559Fragment" />
+</navigation>

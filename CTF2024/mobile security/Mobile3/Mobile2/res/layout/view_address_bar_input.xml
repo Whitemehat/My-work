@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+        <LinearLayout android:id="@id/leftButtonsLayout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/backButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" android:scaleX="-1.0" app:srcCompat="@drawable/ic_chevron_right_active" style="@style/clickableBorderlessBackground" />
+            <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+            <ImageButton android:id="@id/forwardButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" app:srcCompat="@drawable/ic_chevron_right_active" style="@style/clickableBorderlessBackground" />
+            <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+        </LinearLayout>
+        <FrameLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/view_size_4" android:layout_marginBottom="@dimen/view_size_4" android:layout_weight="1.0">
+            <View android:background="@drawable/background_address_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/addressField" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageButton android:id="@id/pageSecureIcon" android:layout_width="@dimen/button_height_small" android:layout_height="fill_parent" android:tint="@color/neutralButtonColorAddressBar" android:layout_marginStart="@dimen/view_size_12" app:srcCompat="@drawable/ic_secure" style="@style/clickableBorderlessBackground" />
+                <TextView android:textSize="@dimen/text_size_default" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/address" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/view_size_4" android:layout_marginEnd="@dimen/view_size_12" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:id="@id/rightButtonsLayout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+            <ImageButton android:id="@id/homeButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" app:srcCompat="@drawable/ic_home" style="@style/clickableBorderlessBackground" />
+        </LinearLayout>
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+        <ImageButton android:id="@id/extraActionsButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" app:srcCompat="@drawable/ic_extra_actions" style="@style/clickableBorderlessBackground" />
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/addressInput" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+        <Space android:id="@id/leftButtonsPlaceholder" android:background="@color/colorPrimary" android:layout_width="0.0dip" android:layout_height="@dimen/space_unused_dimension" />
+        <FrameLayout android:background="@color/windowBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/view_size_4" android:layout_marginBottom="@dimen/view_size_4" android:layout_weight="1.0">
+            <View android:background="@drawable/background_address_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.toshi.view.custom.PlainTextPasteEditText android:textSize="@dimen/text_size_default" android:ellipsize="end" android:id="@id/userInput" android:background="@android:color/transparent" android:paddingTop="@dimen/view_size_12" android:paddingBottom="@dimen/view_size_12" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/dapp_search_hint" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" android:selectAllOnFocus="true" android:layout_weight="1.0" android:inputType="textNoSuggestions|textUri" android:imeOptions="actionGo" android:paddingStart="@dimen/view_size_16" />
+                <ImageButton android:id="@id/clearButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" app:srcCompat="@drawable/ic_clear_address_bar" style="@style/clickableBorderlessBackground" />
+            </LinearLayout>
+        </FrameLayout>
+        <Space android:id="@id/rightButtonsPlaceholder" android:layout_width="0.0dip" android:layout_height="@dimen/space_unused_dimension" />
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+        <ImageButton android:id="@id/closeSearchButton" android:layout_width="@dimen/button_height_medium" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/buttonColorAddressBar" app:srcCompat="@drawable/ic_close_full_screen" style="@style/clickableBorderlessBackground" />
+        <Space android:layout_width="@dimen/view_size_4" android:layout_height="@dimen/space_unused_dimension" />
+    </LinearLayout>
+</FrameLayout>

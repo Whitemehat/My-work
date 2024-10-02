@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/avatar" android:layout_width="@dimen/avatar_size_extra_small" android:layout_height="@dimen/avatar_size_extra_small" />
+    <Space android:layout_width="@dimen/view_size_12" android:layout_height="@dimen/space_unused_dimension" />
+    <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorPrimary" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/NormalEllipsizeEnd" />
+    <com.toshi.view.custom.CollapsingTextView android:textSize="@dimen/text_size_subtitle" android:textColor="@color/textColorSecondary" android:id="@id/paymentAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Space android:layout_width="12.0dip" android:layout_height="@dimen/space_unused_dimension" />
+    <CheckBox android:theme="@style/CheckBox" android:layout_gravity="center_vertical" android:id="@id/checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/view_size_12" android:layout_marginRight="@dimen/view_size_12" />
+</LinearLayout>

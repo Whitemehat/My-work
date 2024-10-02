@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <ConstraintSet android:id="@id/expandedConstraintSet">
+        <Constraint android:id="@id/adjustableMinerFeeCardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/view_size_16" android:layout_marginEnd="@dimen/view_size_16" motion:cardCornerRadius="@dimen/view_size_16" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute motion:attributeName="cardElevation" motion:customDimension="@dimen/view_size_24" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/collapsedConstraintSet">
+        <Constraint android:id="@id/adjustableMinerFeeCardView" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_64" android:layout_marginStart="@dimen/view_size_16" android:layout_marginEnd="@dimen/view_size_16" motion:cardCornerRadius="@dimen/view_size_16" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute motion:attributeName="cardElevation" motion:customDimension="@dimen/view_size_0" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition android:id="@id/expandTransition" motion:constraintSetEnd="@id/expandedConstraintSet" motion:constraintSetStart="@id/collapsedConstraintSet" motion:duration="500">
+        <OnClick motion:clickAction="toggle" motion:targetId="@id/mainCellContainer" />
+    </Transition>
+</MotionScene>

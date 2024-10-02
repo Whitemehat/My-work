@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="drawable" name="ic" id="0x7f010000" />
+    <public type="drawable" name="ic_launcher" id="0x7f010001" />
+    <public type="id" name="textView" id="0x7f020000" />
+    <public type="layout" name="main" id="0x7f030000" />
+</resources>

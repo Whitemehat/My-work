@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/separator" android:background="@color/grey_30" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_1" />
+    <TextView android:textStyle="normal" android:textColor="@color/primary_blue" android:gravity="center" android:id="@id/button" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_56" style="@style/DefaultBold16Medium" />
+</LinearLayout>

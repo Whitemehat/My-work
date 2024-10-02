@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/wallet" android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_size_16" android:layout_marginBottom="@dimen/view_size_16" android:foreground="?android:selectableItemBackground" android:paddingStart="@dimen/view_size_16" android:paddingEnd="@dimen/view_size_16"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_subtitle" android:textStyle="bold" android:textColor="@color/textColorPrimary" android:id="@id/connectionCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/space_unused_dimension" android:layout_weight="1.0" />
+    <Button android:textSize="@dimen/text_size_subtitle" android:textColor="@color/primary_red" android:ellipsize="end" android:gravity="center" android:id="@id/disconnectAllButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/disconnect_all" android:maxLines="1" android:foregroundGravity="center" android:paddingStart="@dimen/view_size_8" android:paddingEnd="@dimen/view_size_8" style="@style/FlatButton" />
+</LinearLayout>

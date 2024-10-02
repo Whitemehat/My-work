@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/background_corner_radius_16" android:layout_width="fill_parent" android:layout_height="@dimen/view_size_48" android:backgroundTint="@color/grey_2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/grey_50" android:gravity="center_vertical" android:id="@id/leftLabel" android:layout_width="@dimen/view_size_80" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/view_size_16" />
+    <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/text_size_16" android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/view_size_12" android:layout_toEndOf="@id/leftLabel" android:backgroundTint="@color/grey_2" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rightLabelContainer" android:padding="@dimen/view_size_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_x_circular" android:layout_marginEnd="@dimen/view_size_8" />
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/grey_50" android:id="@id/rightLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/view_size_8" />
+    </LinearLayout>
+</RelativeLayout>

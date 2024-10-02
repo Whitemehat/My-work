@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/banned_location_nav_graph" app:startDestination="@id/bannedLocationFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/onboarding_nav_graph" />
+    <include app:graph="@navigation/backup_phrase_nav_graph" />
+    <include app:graph="@navigation/sign_out_nav_graph" />
+    <fragment android:label="BannedLocationFragment" android:name="com.toshi.view.fragment.BannedLocationFragment" android:id="@id/bannedLocationFragment">
+        <action android:id="@id/action_bannedLocationFragment_to_onboarding_nav_graph" app:destination="@id/onboarding_nav_graph" />
+        <action android:id="@id/action_bannedLocationFragment_to_backup_phrase_nav_graph" app:destination="@id/backup_phrase_nav_graph" />
+    </fragment>
+</navigation>

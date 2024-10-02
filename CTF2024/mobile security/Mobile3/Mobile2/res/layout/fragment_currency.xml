@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.toshi.view.custom.ToolbarLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:tint="@color/textColorContrast" app:srcCompat="@drawable/ic_arrow_back" style="@style/CloseButton" />
+        <Space android:layout_width="@dimen/view_size_16" android:layout_height="@dimen/space_unused_dimension" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/local_currency" style="@style/Toolbar.TitleText" />
+    </com.toshi.view.custom.ToolbarLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/elevation_none" app:layout_behavior="com.toshi.view.custom.FixAppBarLayoutBehavior">
+            <TextView android:layout_width="fill_parent" android:layout_height="54.0dip" android:text="@string/currencies" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_scrollFlags="scroll" style="@style/ListSubTitle" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/currencyList" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
