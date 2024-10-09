@@ -1,0 +1,18 @@
+.class public Lcom/example/clickclick/Message;
+.super Ljava/lang/Object;
+.source "Message.java"
+
+
+# static fields
+.field public static final secret:Ljava/lang/String; = "29648872964875296486429648872964887296497729649832964920296497929649762964903296497829649772964983296489829649832964903296498729649822964986296498229649862964983296497629649792964987296498029649872964982296498029649822964979296498229649832964979296497929649782964983296489629649812964926"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
