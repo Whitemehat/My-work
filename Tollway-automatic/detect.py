@@ -38,10 +38,10 @@ while True:
             # Check if the detected object is a car (adjust the class ID based on your model)
             if box.cls == 2:  # Assuming class ID 2 is for cars; adjust based on the model's class mapping
                 command = "Car"
-                #serialInst.write(command.encode('utf-8'))
+                serialInst.write(command.encode('utf-8'))
             elif box.cls == 7:
                 command = "Truck"
-                #serialInst.write(command.encode("utf-8"))
+                serialInst.write(command.encode("utf-8"))
 cap.release()
 time.sleep(5)
 while True:
