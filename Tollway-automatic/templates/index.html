@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tollway Payment System</title>
+</head>
+<body>
+    <h1>Tollway Automatic Payment System</h1>
+    <p><strong>Vehicle Type:</strong> {{ vehicle_type }}</p>
+    <p><strong>Toll Fee:</strong> ${{ toll_fee }}</p>
+    <p><strong>Transaction ID:</strong> {{ transaction_id }}</p>
+    <p><strong>Payment Status:</strong> {{ payment_status }}</p>
+    <img src="{{ qr_code_path }}" alt="QR Code for Payment">
+    <form action="/confirm_payment" method="post">
+        <input type="hidden" name="transaction_id" value="{{ transaction_id }}">
+        <input type="hidden" name="vehicle_type" value="{{ vehicle_type }}">
+        <input type="hidden" name="toll_fee" value="{{ toll_fee }}">
+        <button type="submit">Mark as Paid</button>
+    </form>
+</body>
+</html>
