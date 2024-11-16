@@ -98,7 +98,7 @@ def connect_port():
             use = "COM" + str(com)
             print(use)
     serialInst.baudrate = 9600
-    serialInst.port = "COM"
+    serialInst.port = use
     serialInst.open()
     time.sleep(1)
     return serialInst
