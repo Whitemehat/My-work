@@ -21,8 +21,6 @@ serialInst.port = "COM3"
 serialInst.open()
 time.sleep(1)
 
-# Function to classify car types (Placeholder function)
-# Open a video file or capture from a camera
 cap = cv2.VideoCapture("C:/Users/Downloads/scania_green-truck-award_2024.jpg" )  # Replace with 0 for webcam or 'image.jpg' for an image
 cap_cam = cv2.VideoCapture(0)
 while True:
@@ -32,10 +30,9 @@ while True:
 
     results = model.predict(source = frame, show = True , )
 
-    # Iterate over detection results
+
     for result in results:
         for box in result.boxes:
-            # Check if the detected object is a car (adjust the class ID based on your model)
             if box.cls == 2:  # Assuming class ID 2 is for cars; adjust based on the model's class mapping
                 command = "Car"
                 serialInst.write(command.encode('utf-8'))
