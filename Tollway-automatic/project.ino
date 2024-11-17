@@ -48,7 +48,7 @@ void loop()
   else if (msg == "Paid")
   {
     myservo.write(0);
-    delay(4000);
+    delay(5500);
     myservo.write(90);
     lcd.clear();
     lcd.setCursor(0,0);
