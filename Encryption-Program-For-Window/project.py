@@ -152,7 +152,7 @@ def UI_app ():
     app.resizable(False, False)
     upload_button = tk.Button(app , width = 10 , height = 2 , text = "Upload Files", bg = "green" , command = upload_file)
     upload_button.pack(pady = 20 , )
-    Label_filename = tk.Label(app , text = "Select File: ", width = 9 , height = 2 , bg = "grey")
+    Label_filename = tk.Label(app , text = "Select File: ", width = 9 , height = 2 , bg = "gray")
     Label_filename.pack()
     License_Label = tk.Label(app , width = 40 , height = 30 , text = "Chayutphol License" , bg = "gray")
     License_Label.pack()
