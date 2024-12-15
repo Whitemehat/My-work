@@ -5,7 +5,6 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 
-
 # Generate RSA Key Pair
 def generate_keys(input_name):
     global key_path , key_name , private_key_path ,public_key_path
@@ -136,6 +135,7 @@ def upload_file():
 def UI_app():
     global app, Label_filename
     app = tk.Tk()
+    app.title("Encryption Program")
     app.geometry("700x400")
     app.resizable(False, False)
 
@@ -158,5 +158,3 @@ def UI_app():
 
 if __name__ == "__main__":
     UI_app()
-    
-    
